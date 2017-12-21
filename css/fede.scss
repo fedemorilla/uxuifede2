@@ -1,0 +1,285 @@
+/* Scss Document */
+$azul-oscuro:#05122E;
+$gris: #E8E8E8;
+
+@mixin sm-down {
+	@media (max-width: 576px ) {
+		@content;
+	}
+}
+@mixin md-down {
+	@media (max-width: 720px ) {
+		@content;
+	}
+}
+@mixin lg-down {
+	@media (max-width: 992px ) {
+		@content;
+	}
+}
+@mixin lg-up {
+	@media (min-width: 992px ) {
+		@content;
+	}
+}
+@mixin skills {
+	height: 100%;
+	color: white;
+	padding-left: 5px;
+	background-color: $azul-oscuro;
+
+}
+@mixin img-fot {
+	background-size:cover;
+
+}
+/** {
+	background-color: hsla(0,0%,0%,0.13);
+}*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600,800');
+@import url('../fonts/FontAwesome.otf');
+@import ' fit-images.scss';
+
+
+body {
+	background-color: white;
+}
+.header {
+	height:100vh;
+	margin-top: -56px;
+	background-color: $azul-oscuro;
+
+  
+	h1, p {
+		color: white;
+	}
+	
+}
+#index {
+	.header {
+		
+		background: url('../img/back_img/home_img.jpg') center center no-repeat;
+  background-size:cover;
+		&:before {
+    content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(to bottom right,#934dff,#002aff);
+	opacity: .8;
+  }
+		
+	}
+}
+#ui {
+	.header {
+		
+		background: url(' ../img/back_img/UI_img.jpg') center center no-repeat;
+  background-size:cover;
+		&:before {
+    content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(to bottom right,#934dff,#002aff);
+	opacity: .9;
+  }
+		
+	}
+}
+
+#ux {
+	.header {
+		
+		background: url(' ../img/back_img/UX_img_2.jpg') center center no-repeat;
+  background-size:cover;
+		&:before {
+    content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(to bottom right,#934dff,#ff3600);
+	opacity: .9;
+  }
+		
+	}
+}
+#graphic {
+	.header {
+		
+		background: url(' ../img/back_img/graphic_img.jpg') center center no-repeat;
+  background-size:cover;
+		&:before {
+    content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(to bottom right,#ffba00,#002aff);
+	opacity: .9;
+  }
+		
+	}
+}
+#resume {
+	.header {
+		
+		background: url(' ../img/back_img/fede.jpg') center center no-repeat;
+  background-size:cover;
+		filter: FlipH;
+		&:before {
+    content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(to bottom right,#ffba00,#002aff);
+	opacity: .6;
+  }
+		
+	}
+}
+
+h1, h2, h3 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800;
+}
+h2 {
+	font-size: 1.7rem;
+	text-transform: uppercase;
+	@include sm-down {
+		font-size: 1rem;
+		text-transform: none;
+	}
+
+}
+h3 {
+	font-size: 1.2rem;
+}
+h4 {
+	font-size: 1rem;
+	text-transform: uppercase;
+}
+h5 {
+	a {
+		font-size: 1rem;
+	}
+}
+.border-left {
+	border-left: solid 3px #3195FF!important;
+	padding-left: 20px;
+	@include sm-down {
+		padding-left: 10px;
+	}
+}
+mg-5 {
+	margin-bottom: 3.5rem;
+}
+.hidde-sm-down {
+	@include sm-down {
+		display: none;
+	}
+}
+.border-bottom {
+	border-bottom: 2px solid #3195FF;
+}
+.border-right {
+	border-right: 1px solid #B5B5B5;
+}
+#css-html {
+	max-width: 75%;
+}
+#bootstrap {
+	max-width: 85%;
+}
+#adobe {
+	max-width: 100%;
+}
+#uxui {
+	max-width: 60%;
+}
+#graphic-design {
+	max-width: 100%;
+}
+#skills {
+	font-size: 0.8rem;
+}
+#css-html, #bootstrap, #adobe, #uxui, #graphic-design  {
+	@include skills;
+}
+footer {
+	color:white;
+	background-color: $azul-oscuro;
+	i {
+		padding-right: 5px;
+	}
+	a {
+		color: white;
+	}
+	h2 {
+		border-bottom: 1px solid #848484;
+		padding-bottom: 20px;
+	}
+	
+}
+.hide-lg-down {
+	@include lg-down {
+		display: none;
+	}
+}
+.hide-md-down {
+	@include md-down {
+		display: none;
+	}
+}
+.show-up {
+		@include lg-up {
+		display:none;
+	}
+}
+.btn {
+	border-radius: 4rem;
+}
+.navbar {
+	background-color: #FFE600 !important;
+	a {
+		color: $azul-oscuro !important;
+	}
+	li {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+	z-index: 1000;
+}
+.sticky-top {
+	a {
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+	}
+}
+.modal-body {
+	padding: 0px;
+}
+.modal-dialog {
+	max-width: 1000px;
+}
+.modal-dialog-600 {
+	max-width: 600px !important;
+}
+.display-4 {
+	font-size: 2rem;
+}
+
+.blockquote-footer {
+	background-color: white;
+} 

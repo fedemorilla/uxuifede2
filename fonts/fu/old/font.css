@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'FrutigerLT-UltraBlack';
+  src: url('FrutigerLT-UltraBlack.woff') format('woff'),
+       url('FrutigerLT-UltraBlack.ttf') format('truetype'),
+       url('FrutigerLT-UltraBlack.svg#FrutigerLT-UltraBlack') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LTe50335';
+  src: url('LTe50335.eot');
+  src: url('LTe50335.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
